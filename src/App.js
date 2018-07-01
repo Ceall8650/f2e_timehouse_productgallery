@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Topbar from 'view/Topbar';
+import Main from 'view/Main';
 
-class App extends Component {
+const Root = styled.div`
+  height: 100%;
+  display: grid;
+  grid-template: repeat(20, 100px) / repeat(8, 120px);
+`
+
+ class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Root>
+        <Topbar />
+        <Main />
+      </Root>
     );
   }
 }
